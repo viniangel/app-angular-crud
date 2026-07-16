@@ -26,6 +26,9 @@ export class Producto {
     this.stock = 0;
     this.descripcion = "";
     this.imagen = "";
+
+    const prods = localStorage.getItem("productos") || "[]"
+    this.productos = JSON.parse(prods);
   }
 
   guardar() {
@@ -40,6 +43,9 @@ export class Producto {
     else {
       this.productos.push({ nombre: this.nombre, precio: this.precio, descripcion: this.descripcion, imagen: this.imagen, stock: this.stock });
     }
+
+    //Guardar en LocalStorage
+    localStorage.setItem("productos", JSON.stringify(this.productos));
     this.resetear()
   }
 

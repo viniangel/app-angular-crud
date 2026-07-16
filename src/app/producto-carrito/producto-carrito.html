@@ -1,0 +1,8 @@
+<h1>Productos a la venta!!</h1>
+{{productos}}
+@for (p of productos; track p.nombre) {
+   <p>{{p.nombre}}</p>
+   <img [src]="p.imagen" width="100">
+   <p>{{p.precio}}</p>
+   <button (click)="agregarCarrito(p)">Agregar al carrito</button>
+}

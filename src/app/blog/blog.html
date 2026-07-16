@@ -1,0 +1,38 @@
+<div class="container py-5">
+
+   <h1 class="text-center mb-5 retro-title">
+      📰 Lista de Publicaciones
+   </h1>
+
+   <div class="row g-4">
+
+      @for(publi of publicaciones(); track publi.id) {
+
+      <div class="col-md-6 col-lg-4">
+
+         <div class="card retro-card h-100">
+
+            <img [src]="publi.social_image" class="card-img-top retro-img" alt="{{publi.title}}">
+
+            <div class="card-body">
+
+               <h5 class="card-title retro-card-title">
+                  {{publi.title}}
+               </h5>
+
+               <a [href]="publi.canonical_url" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline-light w-100 mt-3">
+                  📖 Leer más
+               </a>
+
+            </div>
+
+         </div>
+
+      </div>
+
+      }
+
+   </div>
+
+</div>

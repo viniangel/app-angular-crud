@@ -1,0 +1,54 @@
+.retro-title{
+    color:#ffb000;
+    text-shadow:
+        0 0 8px #ffb000,
+        0 0 15px rgba(255,176,0,.5);
+}
+
+.retro-card{
+    background:#151515;
+    border:2px solid #39ff14;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 0 8px rgba(57,255,20,.3);
+}
+
+.retro-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 0 15px #39ff14,
+        0 0 30px rgba(57,255,20,.5);
+}
+
+.retro-img{
+    height:220px;
+    object-fit:cover;
+    border-bottom:2px solid #39ff14;
+}
+
+.retro-card-title{
+    color:#ffb000;
+    font-weight:bold;
+    text-align:center;
+    min-height:60px;
+}
+
+.btn-outline-light{
+    border:2px solid #ffb000 !important;
+    color:#ffb000 !important;
+    font-weight:bold;
+}
+
+.btn-outline-light:hover{
+    background:#ffb000 !important;
+    color:#111 !important;
+}
+
+.card-body{
+    background:#151515;
+}
+
+.card{
+    color:white;
+}

@@ -1,0 +1,31 @@
+.retro-navbar{
+    background:#101010;
+    border-bottom:2px solid #39ff14;
+    box-shadow:0 0 10px rgba(57,255,20,.3);
+}
+
+.navbar-brand{
+    color:#ffb000 !important;
+    text-shadow:0 0 8px #ffb000;
+}
+
+.nav-link{
+    color:#d9d9d9 !important;
+    margin-left:15px;
+    border-radius:8px;
+    transition:.3s;
+    padding:8px 15px !important;
+}
+
+.nav-link:hover{
+    background:#39ff14;
+    color:#111 !important;
+    box-shadow:0 0 10px #39ff14;
+}
+
+.nav-link.active{
+    background:#ffb000;
+    color:#111 !important;
+    font-weight:bold;
+    box-shadow:0 0 10px #ffb000;
+}
