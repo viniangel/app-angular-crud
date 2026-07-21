@@ -1,8 +1,123 @@
-<h1>Productos a la venta!!</h1>
-{{productos}}
-@for (p of productos; track p.nombre) {
-   <p>{{p.nombre}}</p>
-   <img [src]="p.imagen" width="100">
-   <p>{{p.precio}}</p>
-   <button (click)="agregarCarrito(p)">Agregar al carrito</button>
-}
+<div class="container py-5">
+
+    <h1 class="retro-title text-center mb-5">
+        🛒 Productos a la Venta
+    </h1>
+
+    <div class="row g-4">
+
+        @for (p of productos(); track p.nombre) {
+
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="card retro-card h-100">
+
+                <img
+                    [src]="p.imagen"
+                    class="card-img-top retro-img"
+                    alt="{{p.nombre}}">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="retro-card-title">
+                        {{p.nombre}}
+                    </h5>
+
+                    <h4 class="retro-price">
+                        $ {{p.precio}}
+                    </h4>
+
+                    <button
+                        class="btn retro-btn mt-auto"
+                        (click)="agregarCarrito(p)">
+
+                        🛒 Agregar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+    <hr class="retro-divider my-5">
+
+    <h2 class="retro-subtitle mb-4">
+        🛍 Carrito de Compras
+    </h2>
+
+    <div class="row g-3">
+
+        @for (c of carrito(); track c.nombre){
+
+        <div class="col-lg-4 col-md-6">
+
+            <div class="card retro-cart">
+
+                <div class="row g-0">
+
+                    <div class="col-4">
+
+                        <img
+                            [src]="c.imagen"
+                            class="img-fluid rounded-start retro-cart-img">
+
+                    </div>
+
+                    <div class="col-8">
+
+                        <div class="card-body">
+
+                            <h5 class="retro-cart-title">
+                                {{c.nombre}}
+                            </h5>
+
+                            <p class="retro-price mb-3">
+                                $ {{c.precio}}
+                            </p>
+
+                            <button
+                                class="btn btn-danger btn-sm"
+                                (click)="eliminarItemCarrito(c)">
+
+                                🗑 Eliminar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+    <div class="retro-total mt-5">
+
+        <h2>Total</h2>
+
+        <h1>
+            $ {{total()}}
+        </h1>
+
+        <button
+            class="btn btn-lg retro-btn-danger mt-3"
+            (click)="reset()">
+
+            🗑 Vaciar carrito
+
+        </button>
+
+    </div>
+
+</div>

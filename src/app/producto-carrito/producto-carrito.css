@@ -1,0 +1,137 @@
+body{
+    background:#1b1b2f;
+}
+
+.retro-title{
+    color:#ffd54f;
+    text-shadow:0 0 12px #ffd54f;
+    font-weight:bold;
+}
+
+.retro-subtitle{
+    color:#00e5ff;
+    text-shadow:0 0 10px #00e5ff;
+}
+
+.retro-divider{
+    border:2px solid #00e5ff;
+    opacity:1;
+}
+
+.retro-card{
+
+    background:#2a2a40;
+    border:2px solid #ffd54f;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.retro-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(255,213,79,.6);
+}
+
+.retro-img{
+
+    height:230px;
+    object-fit:cover;
+}
+
+.retro-card-title{
+
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    height:60px;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    line-clamp:2;
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+}
+
+.retro-price{
+
+    color:#00e676;
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+}
+
+.retro-btn{
+
+    background:#00bcd4;
+    color:white;
+    font-weight:bold;
+    border:none;
+}
+
+.retro-btn:hover{
+
+    background:#00e5ff;
+    color:black;
+}
+
+.retro-cart{
+
+    background:#242438;
+    border:2px solid #00e5ff;
+    border-radius:12px;
+}
+
+.retro-cart-img{
+
+    height:100%;
+    object-fit:cover;
+}
+
+.retro-cart-title{
+
+    color:white;
+    font-weight:bold;
+
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    line-clamp:2;
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+}
+
+.retro-total{
+
+    background:#2d2d44;
+    border:3px solid #ffd54f;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(255,213,79,.4);
+}
+
+.retro-total h2{
+
+    color:white;
+}
+
+.retro-total h1{
+
+    color:#00ff90;
+    font-size:3rem;
+    text-shadow:0 0 12px #00ff90;
+}
+
+.retro-btn-danger{
+
+    background:#e53935;
+    color:white;
+    border:none;
+}
+
+.retro-btn-danger:hover{
+
+    background:#ff5252;
+}

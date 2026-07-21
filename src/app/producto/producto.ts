@@ -46,7 +46,7 @@ export class Producto {
 
     //Guardar en LocalStorage
     localStorage.setItem("productos", JSON.stringify(this.productos));
-    this.resetear()
+    this.resetear();
   }
 
   eliminar(posicion: number) {
